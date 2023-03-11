@@ -1,3 +1,6 @@
+"use client";
+import { darkTheme } from "../components/theme";
+import { ThemeProvider, CssBaseline } from "@mui/material";
 export const metadata = {
   title: "Krishna Kalyana",
   description: "",
@@ -6,7 +9,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-black">{children}</body>
+      <ThemeProvider theme={darkTheme}>
+        <CssBaseline />
+        <body>{children}</body>
+      </ThemeProvider>
     </html>
   );
 }
