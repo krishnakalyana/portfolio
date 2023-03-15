@@ -7,6 +7,17 @@ import "./globals.css";
 export default function Home() {
   return (
     <main className="overflow-x-hidden">
+      <div
+        style={{
+          width: "100%",
+          height: "300%",
+          position: "absolute",
+          zIndex: "-1",
+          background: "rgb(0,0,0)",
+          background:
+            "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(93,93,93,1) 80%)",
+        }}
+      ></div>
       <section>
         <Navbar />
       </section>
