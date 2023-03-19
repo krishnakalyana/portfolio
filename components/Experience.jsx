@@ -17,6 +17,7 @@ import axios from "axios";
 import moment from "moment/moment";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
+import { motion } from "framer-motion";
 function Experience() {
   const [experienceData, setexperienceData] = useState([]);
   useEffect(() => {
@@ -36,7 +37,16 @@ function Experience() {
 
       {experienceData.map((exp, index) => {
         return (
-          <div key={index} className=" flex justify-center w-screen  p-2">
+          <motion.div
+            key={index}
+            className=" flex justify-center w-screen  p-2"
+            initial={{ opacity: 0, y: -10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 1,
+              delay: 0.2,
+            }}
+          >
             <Paper key={index} elevation={4} className="w-11/12 p-4">
               <Accordion>
                 <AccordionSummary
@@ -93,7 +103,7 @@ function Experience() {
                 </AccordionDetails>
               </Accordion>
             </Paper>
-          </div>
+          </motion.div>
         );
       })}
     </>
