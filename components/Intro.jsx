@@ -132,10 +132,6 @@ function Intro() {
           </div>
         </Paper>
       </motion.div>
-
-      <div className="flex justify-center ">
-        <div className="w-11/12  border-2 opacity-50 " />
-      </div>
     </motion.div>
   );
 }
