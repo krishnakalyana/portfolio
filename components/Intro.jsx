@@ -31,12 +31,12 @@ function Intro() {
         duration: 1.0,
       }}
     >
-      <motion.div whileHover={{ scale: 1.1 }}>
+      <motion.div whileHover={{ scale: 1.01 }}>
         <Paper
           elevation={4}
           className="flex   sm:flex-row flex-col-reverse items-center p-4 "
         >
-          <div className="">
+          <div className="p-2">
             <TypeAnimation
               sequence={[
                 "Hi I'm",
