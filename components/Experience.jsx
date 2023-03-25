@@ -20,6 +20,11 @@ import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import { motion } from "framer-motion";
 function Experience() {
   const [experienceData, setexperienceData] = useState([]);
+  const handleExpOpen = (index, open) => {
+    let tempExperienceData = [...experienceData];
+    tempExperienceData[index].open = !open;
+    setexperienceData(tempExperienceData);
+  };
   useEffect(() => {
     axios.get("/api/experience").then((res) => {
       let { data } = res.data;
@@ -48,7 +53,10 @@ function Experience() {
             }}
           >
             <Paper key={index} elevation={4} className="w-11/12 p-4">
-              <Accordion>
+              <Accordion
+                expanded={exp.open}
+                onChange={() => handleExpOpen(index, exp.open)}
+              >
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon />}
                   aria-controls="panel1a-content"
