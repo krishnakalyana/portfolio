@@ -5,6 +5,7 @@ export async function GET(request) {
   return NextResponse.json({
     data: [
       {
+        open: true,
         designation: "Tech Lead",
         company: "SFLHUB",
         startDate: "1/1/2023",
@@ -28,6 +29,7 @@ export async function GET(request) {
           "SFL is a company that provides logistics services to businesses through technology.",
       },
       {
+        open: false,
         designation: "Software Engineer",
         company: "Snehix",
         startDate: "7/1/2020",
@@ -47,6 +49,7 @@ export async function GET(request) {
           "Snehix is developing an ecosystem around E-ink tablet (The Blackboard).",
       },
       {
+        open: false,
         designation: "Quality Assurance Engineer",
         company: "Codemasters",
         startDate: "2/1/2020",
