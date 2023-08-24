@@ -2,7 +2,7 @@
 import { Button } from "@mui/material";
 import React from "react";
 import { motion } from "framer-motion";
-function Navbar() {
+function Navbar({ swiitchToExp }) {
   return (
     <motion.div
       className=" flex justify-center w-screen "
@@ -20,8 +20,9 @@ function Navbar() {
       }}
     >
       <div className="w-11/12  flex flex-row-reverse ">
+        <Button>Resume</Button>
         <Button>About Me</Button>
-        <Button>Experience </Button>
+        <Button onClick={() => swiitchToExp()}>Experience </Button>
       </div>
     </motion.div>
   );
