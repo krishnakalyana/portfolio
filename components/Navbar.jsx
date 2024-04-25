@@ -3,6 +3,24 @@ import { Button } from "@mui/material";
 import React from "react";
 import { motion } from "framer-motion";
 function Navbar({ swiitchToExp }) {
+  const onButtonClick = () => {
+     
+    // using Java Script method to get PDF file
+    fetch("Krishna-Kalyana-S.pdf").then((response) => {
+        response.blob().then((blob) => {
+         
+            // Creating new object of PDF file
+            const fileURL =
+                window.URL.createObjectURL(blob);
+                 
+            // Setting various property values
+            let alink = document.createElement("a");
+            alink.href = fileURL;
+            alink.download = "Krishna-Kalyana.pdf";
+            alink.click();
+        })
+      })
+  }
   return (
     <motion.div
       className=" flex justify-center w-screen "
@@ -20,7 +38,7 @@ function Navbar({ swiitchToExp }) {
       }}
     >
       <div className="w-11/12  flex flex-row-reverse ">
-        <Button>Resume</Button>
+        <Button onClick={onButtonClick}>Resume</Button>
         <Button>About Me</Button>
         <Button onClick={() => swiitchToExp()}>Experience </Button>
       </div>
