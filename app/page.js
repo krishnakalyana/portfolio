@@ -7,11 +7,14 @@ import "./globals.css";
 
 export default function Home() {
   const ref = useRef(null);
+  const aboutRef = useRef(null)
 
   const swiitchToExp = () => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
-
+  const switchToAbout =()=>{
+    aboutRef?.current?.scrollIntoView({ behavior: "smooth" });
+  }
   return (
     <main className="overflow-x-hidden ">
       <div
@@ -25,10 +28,10 @@ export default function Home() {
             "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(93,93,93,1) 80%)",
         }}
       ></div>
-      <section>
-        <Navbar swiitchToExp={swiitchToExp} />
+      <section className="fixed">
+        <Navbar swiitchToExp={swiitchToExp} switchToAbout={switchToAbout} />
       </section>
-      <section>
+      <section ref={aboutRef}>
         <Intro />
       </section>
       <section ref={ref}>
