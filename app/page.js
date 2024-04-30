@@ -28,7 +28,7 @@ export default function Home() {
             "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(93,93,93,1) 80%)",
         }}
       ></div>
-      <section className="fixed">
+      <section className="fixed z-20">
         <Navbar swiitchToExp={swiitchToExp} switchToAbout={switchToAbout} />
       </section>
       <section ref={aboutRef}>
