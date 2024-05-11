@@ -49,7 +49,7 @@ function Intro() {
               wrapper="h2"
               cursor={true}
               repeat={Infinity}
-              style={{ fontSize: "2rem" }}
+              style={{ fontSize: "1.6rem" }}
             />
             <div className=" w-80 p-3 ">
               <motion.div
@@ -124,7 +124,7 @@ function Intro() {
               alt="Picture of me"
               style={{
                 width: "100%",
-                height: "20rem",
+                height: "18rem",
                 borderRadius: "50%",
                 opacity: "0.8",
               }}
