@@ -38,15 +38,11 @@ function Navbar({ swiitchToExp,switchToAbout }) {
       }}
     >
       <div className="w-11/12  flex flex-row-reverse " >
-        <div style={{
-          webkitBackdropFilter: "blur(2px)",
-          backdropFilter: "blur(2px)"
-        
-      }}>
+       
         <Button onClick={onButtonClick}>Resume</Button>
         <Button onClick={()=>switchToAbout()}>About Me</Button>
         <Button onClick={() => swiitchToExp()}>Experience </Button>
-        </div>
+       
       </div>
     </motion.div>
   );
