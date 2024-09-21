@@ -6,10 +6,34 @@ export async function GET(request) {
     data: [
       {
         open: true,
+        designation: "Senior Software Engineer",
+        company: "Propel",
+        startDate: "6/1/2024",
+        endDate: todayDate,
+        companyLocation: "US",
+        achievements: [
+          {
+            achievement:
+              "Requirement analysis and interaction with the commerce client to comprehend the modifications in the current module.",
+          },
+          {
+            achievement:
+              "Managing a squad of 5 developers and distributing the task accordingly.",
+          },
+          {
+            achievement:
+              "Development of different components using React JS with use of array of react js libraries like Axios, Material UI, Chartjs, React Router, Redux Context API etc.",
+          },
+        ],
+        companyDescription:
+          "SFL is a company that provides logistics services to businesses through technology.",
+      },
+      {
+        open: false,
         designation: "Tech Lead",
         company: "SFLHUB",
         startDate: "1/1/2023",
-        endDate: todayDate,
+        endDate: "5/6/2024",
         companyLocation: "Delhi",
         achievements: [
           {
